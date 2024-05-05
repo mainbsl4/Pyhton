@@ -127,14 +127,43 @@ x = [1,2,3,4,5,6];
 # x.pop(2);
 # print("pop 2", x);
 
-x.remove(3);
-print("remove", x);
+# x.remove(3);
+# print("remove", x);
 
 
 
-# x.pop(0);
-
+# x.pop();
 # print("pop 0", x);
 
 # x.clear();
 # print("clear", x);
+
+# for i in x:
+#   print("for 1", i);
+
+# for i in range(len(x)):
+#   print("for 2", x[i]);
+#   print("for index", i);
+
+
+
+# i =0;
+# while i < len(x):
+#   print(x[i]);
+#   i=i+1;
+
+
+subArray = [];
+for i in x:
+ if i == 2:
+   subArray.append(i);
+   print(f"list is {subArray}")
+   break;
+
+
+# cars = ["BMW", "MNW", "OD", "OM"];
+# subArray = [];
+# for i in cars:
+#  if "O" in i:
+#    subArray.append(i)
+# print(subArray)
