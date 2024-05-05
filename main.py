@@ -153,17 +153,17 @@ x = [1,2,3,4,5,6];
 #   i=i+1;
 
 
-subArray = [];
-for i in x:
- if i == 2:
-   subArray.append(i);
-   print(f"list is {subArray}")
-   break;
-
-
-# cars = ["BMW", "MNW", "OD", "OM"];
 # subArray = [];
-# for i in cars:
-#  if "O" in i:
-#    subArray.append(i)
-# print(subArray)
+# for i in x:
+#  if i == 2:
+#    subArray.append(i);
+#    print(f"list is {subArray}")
+#    break;
+
+
+
+###############################################################################################
+# lowercase to upercase
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"];
+print([x.upper() for x in fruits]);
+
