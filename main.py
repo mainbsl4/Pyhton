@@ -101,7 +101,7 @@
 
 #array listing
 
-x = [1,2,3,4,5,6];
+# x = [1,2,3,4,5,6];
 
 # print(x[-1]);
 # print(x[2:4]);
@@ -164,6 +164,26 @@ x = [1,2,3,4,5,6];
 
 ###############################################################################################
 # lowercase to upercase
-fruits = ["apple", "banana", "cherry", "kiwi", "mango"];
-print([x.upper() for x in fruits]);
+# fruits = ["apple", "banana", "cherry", "kiwi", "mango"];
+# print([x.upper() for x in fruits]);
 
+
+###################################################################################
+
+# Tuples
+
+tuples = ("main", "Sazzad", "Mijan", "marjan", "koli");
+# print("tuples 1", tuples)
+# print("tuples 2", tuples[2]);
+
+# for i in range(len(tuples)):
+#   print("tuples 3", i);
+
+# if "Mi" in tuples:
+#   print("tuples 4");
+# else:
+#   print("tuples 4", "not found");
+
+updateTuples = list(tuples);
+updateTuples[1] = "Zamia";
+print("update", updateTuples)
