@@ -39,10 +39,9 @@
 # print( "2nd global value is:", x + y +1);
 
 
-
 ################################################################################################################
 
-#function 
+# function
 
 # def fun(a, b, c):
 #   print("1st factory fun value is :", a + b + c);
@@ -61,8 +60,7 @@
 # print(random.randrange(1,9))
 
 
-
-####################################################################################################################################################
+# ###################################################################################################################################################
 
 
 # txt = "My name is Main";
@@ -71,7 +69,7 @@
 # print("Main" in txt);
 
 
-################################################################################################################################################
+# ###############################################################################################################################################
 # I will learn it by Subin vai
 
 # class myclass():
@@ -96,27 +94,25 @@
 #   print("x is not equal to y");
 
 
+# ##############################################################################################################################################
 
-###############################################################################################################################################
+# array listing
 
-#array listing
-
-# x = [1,2,3,4,5,6];
-
+# x = [1, 2, 3, 4, 5, 6]
 # print(x[-1]);
 # print(x[2:4]);
 # print(x[2:]);
 # print(x[:3]);
-# x[2] = 5;
-# print("Chenge", x);
+# x[2] = 5
+# print("Chenge", x)
 # x[2:3] = [5,7];
 # print("Chenge 2", x);
 
 # x.insert(2, "aaa");
 # print("insert", x);
 
-# x.append("bbb");
-# print("append", x);
+# x.append("bbb")
+# print("append", x)
 
 # x.extend(["ccc", "ddd"]);
 # print("extend", x);
@@ -129,7 +125,6 @@
 
 # x.remove(3);
 # print("remove", x);
-
 
 
 # x.pop();
@@ -146,7 +141,6 @@
 #   print("for index", i);
 
 
-
 # i =0;
 # while i < len(x):
 #   print(x[i]);
@@ -161,18 +155,17 @@
 #    break;
 
 
-
 ###############################################################################################
-# lowercase to upercase
+# lowercase to uppercase
 # fruits = ["apple", "banana", "cherry", "kiwi", "mango"];
 # print([x.upper() for x in fruits]);
 
 
-###################################################################################
+#################################################################################
 
 # Tuples
 
-tuples = ("main", "Sazzad", "Mijan", "marjan", "koli");
+# tuples = ("main", "Sazzad", "Mijan", "marjan", "koli")
 # print("tuples 1", tuples)
 # print("tuples 2", tuples[2]);
 
@@ -184,6 +177,77 @@ tuples = ("main", "Sazzad", "Mijan", "marjan", "koli");
 # else:
 #   print("tuples 4", "not found");
 
-updateTuples = list(tuples);
-updateTuples[1] = "Zamia";
-print("update", updateTuples)
+# updateTuples = list(tuples)
+# updateTuples[1] = "Zamia"
+# print("update", updateTuples)
+
+
+# ############################################################################
+
+# sets = {"main", "Mijan", "Marjan"}
+# sets.add("Zamia")
+# # print("sets", sets)
+# sets2 = ['Marjan', 'main', 'c', 'd', 'e', 'f']
+# sets3 = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+# sets4 = {"1", "2", "3", "4", "5", "6", "7", "8", "9"}
+# sets5 = {"l", "m", "n", "o", "p", "q", "r", "s", "t"}
+# sets6 = {"u", "v", "w", "x", "y", "z"}
+# sets.update(sets2, sets3)
+# print('set update', sets)
+
+# for i in sets:
+#     print("for 1", i)
+
+# for i in range(len(sets)):
+#     print("for 2", i)
+
+
+# ##############################################################################################
+
+# Sets
+
+# obb = {
+#     "name": "main",
+#     "age": 20,
+#     "hobbis": ["codeing", "Learning", "thinking"],
+#     "family": [
+#         {
+#             "name": "mijan"
+#         },
+#         {
+#             "name": "marjan"
+#         }
+#     ],
+# }
+#
+# # c = [
+# #     {
+# #         "name": "main",
+# #     }
+# # ]
+#
+# obb["sub"] = [
+#     {
+#         "class": "One",
+#         "sub": "en"
+#     }
+# ]
+#
+# # we can update it like array
+#
+# print(obb)
+# print(obb["hobbis"][0])
+# print(obb["family"][1]["name"])
+# print(obb.get("family"))
+
+
+# ##############################################################################################
+
+# While loop
+
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+    if i == 3:
+        break
