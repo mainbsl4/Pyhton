@@ -245,9 +245,216 @@
 
 # While loop
 
-i = 0
-while i < 5:
-    print(i)
-    i += 1
-    if i == 3:
-        break
+# i = 0
+# while i < 5:
+#     print(i)
+#     i += 1
+#     if i == 3:
+#         break
+
+
+# ################################################################################################
+# for loop
+
+# for i in range(5):
+#     print(i)
+
+# for i in range(5, 10):
+#     print(i)
+#
+# for i in range(1, 20, 2):
+#     print(i)
+
+
+# ################################################################################################
+
+# function
+
+def myFun():
+    print("hi")
+
+
+myFun()
+
+# def myFun1(*x):
+#     print(x[1])
+#
+#
+# myFun1('a', 'b', 'c')
+
+# def myfun(*x):
+#     print(x[0])
+# 
+# 
+# myfun("a", "b", "c")
+
+
+# def myfun(**x):
+#     print(x["b"])
+#
+#
+# myfun(a="a", b="b")
+
+
+# def myfun(a, b, c):
+#     print(a, b)
+#
+#
+# myfun(a="a", b="b", c="c")
+
+
+# def myfun(cun="NO"):
+#     print("I an from", cun)
+#
+#
+# myfun(cun="USA")
+# myfun()
+
+
+# add array in function
+# lists = ["a", "b", "c", "d"]
+# lists = [
+#     {
+#         "name": "main"
+#     },
+#     {
+#         "name": "Zamia"
+#     }
+# ]
+#
+#
+# def myfun(arr):
+#     for i in range(len(arr)):
+#         print(lists[i]["name"])
+#
+#
+# myfun(arr=lists)
+
+
+# def myFun(a, b):
+#     return a + b
+#
+#
+# x = myFun(4, 6)
+# print(x)
+
+
+# ############################################################################################################
+# for Fun
+
+# import psutil
+#
+# # import os
+#
+# # Get CPU usage
+# cpu_usage = psutil.cpu_percent(interval=1)  # Get CPU usage for the last second
+# print("CPU Usage:", cpu_usage)
+#
+# # Get memory usage
+# memory = psutil.virtual_memory()
+# total_memory = memory.total / (1024 * 1024)  # Convert to MB
+# available_memory = memory.available / (1024 * 1024)  # Convert to MB
+# used_memory = memory.used / (1024 * 1024)  # Convert to MB
+# print("Total Memory:", total_memory, "MB")
+# print("Available Memory:", available_memory, "MB")
+# print("Used Memory:", used_memory, "MB")
+#
+# # os.system("shutdown /r /t 1")
+
+
+# ######################################################################################################
+
+# x = lambda a, b: a * b
+# print(x(2, 3))
+
+# def myfun(a):
+#     return lambda x, y: x + y + a
+#
+#
+# z = myfun(1)
+# print(z(2,3))
+
+
+# ######################################################################################################
+
+# classes and object
+
+# class Profile:
+#     x = 1
+#
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def myfun(self):
+#         return f'{self.name} {self.age}'
+#
+#
+# a = Profile("John", 36)
+# # del a.age
+# print(a.myfun())
+# print(a.age)
+
+
+# class Person:
+#   def __init__(self, name, age):
+#     self.name = name
+#     self.age = age
+#
+#   def myfunc(self):
+#     print("Hello my name is " + self.name)
+#
+# p1 = Person("John", 36)
+# p1.myfunc()
+
+
+# class Profile2:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def information(self, gen):
+#         text = f"Hi, my name is {self.name}. I am {self.age}, I am {gen}"
+#         return text
+#
+# zamia = Profile2("Zamia", "21")
+# print(zamia.information("femail"))
+
+
+# class ProfileData:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def profile(self):
+#         return f"name is {self.name}. age is {self.age}"
+#
+#
+# class SubProfileData(ProfileData):
+#     def __init__(self, name, age, sex):
+#         # super.__init__(name, age)
+#         super().__init__(name, age)  # inport from top class value
+#         self.sex = sex
+#
+#     def subprofile(self):
+#         return f"my name is {self.name}. i am {self.age} years old. my gender is {self.sex}"
+#
+#
+# main = ProfileData("main", 22)
+# print(main.profile())
+#
+# main2 = SubProfileData("main", 24, "male")
+# print(main2.subprofile())
+
+####################################################################################################
+
+# I was learned iteration, but it's like for loop. for loop will be best
+# mytuple = ("apple", "banana", "cherry")
+# myit = iter(mytuple)
+#
+# print(next(myit))
+# print(next(myit))
+# print(next(myit))
+
+
+###################################################################################
