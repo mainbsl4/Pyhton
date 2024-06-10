@@ -181,12 +181,11 @@
 # updateTuples[1] = "Zamia"
 # print("update", updateTuples)
 
-
 # ############################################################################
 
 # sets = {"main", "Mijan", "Marjan"}
 # sets.add("Zamia")
-# # print("sets", sets)
+# print("sets", sets)
 # sets2 = ['Marjan', 'main', 'c', 'd', 'e', 'f']
 # sets3 = {1, 2, 3, 4, 5, 6, 7, 8, 9}
 # sets4 = {"1", "2", "3", "4", "5", "6", "7", "8", "9"}
@@ -194,6 +193,9 @@
 # sets6 = {"u", "v", "w", "x", "y", "z"}
 # sets.update(sets2, sets3)
 # print('set update', sets)
+
+# sets = {1,2,3,4,5}
+# print(sets)
 
 # for i in sets:
 #     print("for 1", i)
@@ -449,10 +451,10 @@ myFun()
 ####################################################################################################
 
 # I was learned iteration, but it's like for loop. for loop will be best
-# mytuple = ("apple", "banana", "cherry")
-# myit = iter(mytuple)
-#
-# print(next(myit))
+mytuple = ("apple", "banana", "cherry")
+myit = iter(mytuple)
+
+print(next(myit))
 # print(next(myit))
 # print(next(myit))
 
@@ -482,11 +484,235 @@ myFun()
 # ################################################################################
 
 # json
+#
+# import json
+#
+# # jsonData = '{"name": "Zamia", "age":"22"}'
+# # toJson = json.loads(jsonData)
+# # print(toJson)
+#
+# jsonData = {
+#     "name": "Main",
+#     "age": 22,
+#     "hobby": [
+#         {"play": ["main", "age"]}
+#     ]
+# }
+# x = json.dumps(jsonData)
+# print(x)
+# print(jsonData)
 
-import json
 
-jsonData = '{"name": "Zamia", "age":"22"}'
-toJson = json.loads(jsonData)
-print(toJson)
+# ############################################################|\\\\
+
+# try except
+
+# aro bujte hobe
+
+# x = 2
+# try:
+#     print(x)
+# except:
+#     print("sorry")
+# else:
+#     print("so sorry")
+# finally:
+#     print("thank you")
 
 
+###################################################################
+
+# input
+
+# x = int(input("Enter your input: "))
+
+# for i in range(x):
+#     print(i)
+# for i in x:
+#     print(i)
+# print(x)
+
+
+# since = int(input("Form: "))
+# to = int(input("to: "))
+#
+# for since in range(since, to + 1):
+#     print(f'{since} gorar namta')
+#     for multiplyNumb in range(1, 10):
+#         print(f"{since} * {multiplyNumb} = ", since * multiplyNumb)
+
+
+# f = open("x.txt")
+# print(f.read())
+
+
+# ############################################################
+# ATM Project
+
+pin = 1245
+balance = 2000
+
+# def atm():
+#     print("wellcome to EBL")
+#     while True:
+#         inpPin = int(input("Enter your PIN: "))
+#         if inpPin == pin:
+#             print("1. Check Balance")
+#             print("2. Withdraw Money")
+#             print("3. Deposit Money")
+#             print("4. Change PIN")
+#             print("5. Exit")
+#
+#             choose = int(input("Choose on"))
+#             if choose == 1:
+#                 print(f"Your balance is {balance}")
+#             elif choose == 2:
+#                 WithdrawAmount = float(input("Enter your amount to withdraw : "))
+#                 if WithdrawAmount > balance:
+#                     print(f"Insufficient Balance")
+#
+# atm()
+
+# infinity input
+# x = list(open(0))
+# print(x)
+
+
+# my_list = []
+#
+# for i in range(5):
+#     x = input()
+#     my_list.append(x)
+# print(my_list)
+
+
+# aye inp konodin ses hobe na
+# my_list = []
+#
+# while True:
+#     x = input()
+#     my_list.append(x)
+#
+# print(my_list)
+
+
+# my_list = []
+#
+# while input("More y/n") == 'y':
+#     x = input()
+#     my_list.append(x)
+#
+# print(my_list)
+
+
+# convert from str to int
+# x = "1 2 3 4 5 6"
+# y = x.split()
+#
+# for i in range(len(y)):
+#     print(type(int(y[i])))
+
+
+# runing_total = 0
+#
+# while True:
+#     n = input("inp is : ")
+#     if n == 'q':
+#         break
+#
+#     n = int(n)
+#     runing_total += n
+#
+#     if n == 'q':
+#         break
+#     print(runing_total)
+
+
+# ####################################################################
+# name = "main"
+# print(name[0])
+
+# ###################################################################################
+# find id
+# n = 5
+# print(id(n))
+# print(id(n))
+
+# for i in range(10):
+#     # print(i)
+#     for j in range( i+ 1):
+#         print(j , end=" ")
+#     print(" ")
+
+
+# rows = 6
+# for i in range(rows):
+#     for j in range(i):
+#         print(i, end=' ')
+#     print('')
+
+
+
+# li = [1, 2, 3, 4] 
+# # li[1: 2] = 5, 6, 7
+# li[1:2] = [5, 6, 7] 
+# print(li)
+
+
+# object like as a dictionary
+
+# obb = [
+#     {
+#         "name": "zamia",
+#         "age": 22,
+#         "hobby": [
+#             {"play": ["main", "age"]}
+#         ],
+#         "hobb": [
+#             {
+#                 "play": ["main", "age"]
+#             }
+#         ]
+#     },
+#     {
+#         "name": "main",
+#         "age": 22,
+#         "hobby": [
+#             {"play": ["main", "age"]}
+#         ],
+#         "hobb": [
+#             {
+#                 "play": ["main", "age"]}
+#             ]
+#     }
+# ]
+
+# print(obb[0]["name"])
+
+
+# myList = []
+# while True:
+#     s = input("enter value: ")
+#     myList.append(s)
+#     if s == "q":
+#         break 
+# print(myList)
+
+
+
+
+# find max number without builting function
+li = [2,3,4,5,6,7,8,9,8,5,6,71,2,3,44,55,66,77]
+# max_num = float('-inf')
+
+# for i in li:
+#     if i > max_num:
+#         max_num = i
+# print(max_num)
+
+
+sum = 0
+
+for i in li:
+    sum = sum + i
+print('sum', sum)
