@@ -78,20 +78,35 @@
 # myobj = myclass()
 # print(bool(myobj))
 
-# x =1;
-# y = 2;
-# if not(x == 3 or y == 4):
-#   print("x = y");
+# x = 1
+# y = 2
+# if not (x == 3 or y == 4):
+#     print("x = y")
 # else:
-#   print("x is not equal to y");
-
-
-# x =1;
-# y = 2;
-# if x is not 2:
-#   print("x = y");
+#     print("x is not equal to y")
+#
+# x = 5
+# y = 1
+# if not (x == y):
+#     print("aaa")
 # else:
-#   print("x is not equal to y");
+#     print("x is not equal to y")
+#
+# x = 5
+# y = 1
+# if x is not y:
+#     print("bbb")
+# else:
+#     print("x is not equal to y")
+
+x = 2
+y = 3
+
+# x = [1, 2, 3]
+# y = [1, 2, 3]
+
+print(x is not y)
+print(not (x == y))
 
 
 # ##############################################################################################################################################
@@ -652,8 +667,7 @@ balance = 2000
 #     print('')
 
 
-
-# li = [1, 2, 3, 4] 
+# li = [1, 2, 3, 4]
 # # li[1: 2] = 5, 6, 7
 # li[1:2] = [5, 6, 7] 
 # print(li)
@@ -699,20 +713,45 @@ balance = 2000
 # print(myList)
 
 
+# find max number without a builting function
 
+li = [2, 3, 4, 5, 6, 7, 8, 9, 8, 5, 6, 71, 2, 3, 44, 55, 66, 77]
 
-# find max number without builting function
-li = [2,3,4,5,6,7,8,9,8,5,6,71,2,3,44,55,66,77]
 # max_num = float('-inf')
-
 # for i in li:
 #     if i > max_num:
 #         max_num = i
 # print(max_num)
 
+################################
 
-sum = 0
+# min_num = float('inf')
+# for i in li:
+#     if i < min_num:
+#         min_num = i
+# print(min_num)
 
-for i in li:
-    sum = sum + i
-print('sum', sum)
+########################
+
+# sum = 0
+# for i in li:
+#     sum = sum + i
+# print('sum', sum)
+
+#####################
+
+# for i in li:
+#     if i == 6:
+#         print(True)
+#         break
+
+li1 = [1, 4, 5, 7, 8]
+
+key = 6
+flag = False
+for i in li1:
+    if i == key:
+        flag = True
+        print(flag)
+if not flag:
+    print(flag)
