@@ -99,14 +99,14 @@
 # else:
 #     print("x is not equal to y")
 
-x = 2
-y = 3
-
-# x = [1, 2, 3]
-# y = [1, 2, 3]
-
-print(x is not y)
-print(not (x == y))
+# x = 2
+# y = 3
+#
+# # x = [1, 2, 3]
+# # y = [1, 2, 3]
+#
+# print(x is not y)
+# print(not (x == y))
 
 
 # ##############################################################################################################################################
@@ -470,6 +470,7 @@ mytuple = ("apple", "banana", "cherry")
 myit = iter(mytuple)
 
 print(next(myit))
+
 # print(next(myit))
 # print(next(myit))
 
@@ -564,9 +565,10 @@ print(next(myit))
 # ############################################################
 # ATM Project
 
-pin = 1245
-balance = 2000
-
+# pin = 1245
+# balance = 2000
+#
+#
 # def atm():
 #     print("wellcome to EBL")
 #     while True:
@@ -585,6 +587,52 @@ balance = 2000
 #                 WithdrawAmount = float(input("Enter your amount to withdraw : "))
 #                 if WithdrawAmount > balance:
 #                     print(f"Insufficient Balance")
+#
+#
+# atm()
+
+
+# def atm():
+#     pin = 1234
+#     amount = 1000
+#     print(f'Welcome to EBL')
+#     inpPin = int(input("please enter your pin : "))
+#     if pin == inpPin:
+#         print("1. Check Balance")
+#         print("2. Withdraw Money")
+#         print("3. Deposit Money")
+#         print("4. Change PIN")
+#         print("5. Exit")
+#         while True:
+#             chooseNum = int(input(f"choose on : "))
+#             if chooseNum == 1:
+#                 print(f"your amount is {amount}")
+#             if chooseNum == 2:
+#                 WithdrawAmount = int(input(f"please enter your Withdraw amount : "))
+#                 if WithdrawAmount > amount:
+#                     print(f"your amount is less then {WithdrawAmount}. your amount is {amount}")
+#                 elif WithdrawAmount < amount:
+#                     amount -= WithdrawAmount
+#                     print(f"you are withdraw {WithdrawAmount}\nnow your balance is {amount}")
+#             if chooseNum == 3:
+#                 depoAmount = float(input("Please enter deposit amount : "))
+#                 amount += depoAmount
+#                 print(f"Your deposit amount is {depoAmount}.\nNow your balance is {amount}")
+#             if chooseNum == 4:
+#                 newPin = int(input("Please Enter your new PIN : "))
+#                 conPin = int(input("Confirm PIN : "))
+#                 if newPin == conPin:
+#                     pin = newPin
+#                     print(f"Now your new PIN is {pin}")
+#                 else:
+#                     print(f"PIN doesn't match. please try again")
+#             if chooseNum == 5:
+#                 print(f"Thanks for using EBL")
+#                 # atm()
+#                 break
+#     else:
+#         print("incorrect PIN")
+#
 #
 # atm()
 
@@ -715,7 +763,7 @@ balance = 2000
 
 # find max number without a builting function
 
-li = [2, 3, 4, 5, 6, 7, 8, 9, 8, 5, 6, 71, 2, 3, 44, 55, 66, 77]
+# li = [2, 3, 4, 5, 6, 7, 8, 9, 8, 5, 6, 71, 2, 3, 44, 55, 66, 77]
 
 # max_num = float('-inf')
 # for i in li:
@@ -745,13 +793,28 @@ li = [2, 3, 4, 5, 6, 7, 8, 9, 8, 5, 6, 71, 2, 3, 44, 55, 66, 77]
 #         print(True)
 #         break
 
-li1 = [1, 4, 5, 7, 8]
 
-key = 6
-flag = False
-for i in li1:
-    if i == key:
-        flag = True
-        print(flag)
-if not flag:
-    print(flag)
+# lenier scherch
+
+# li1 = [1, 4, 5, 7, 8]
+#
+# key = 6
+# flag = False
+# for i in li1:
+#     if i == key:
+#         flag = True
+#         print(flag)
+# if flag == False:
+#     print(flag)
+
+
+# file write and read
+f = open('y.txt', 'a')
+f.write("jhfdsagnsrduihng")
+f.close()
+
+f = open("y.txt")
+print(f.read())
+
+
+
