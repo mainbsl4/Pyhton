@@ -7,13 +7,13 @@ myDATA = [
         "name": "Main"
     },
     {
-        "name": "Main"
+        "name": "Zamia"
     },
     {
-        "name": "Main"
+        "name": "Koly"
     },
     {
-        "name": "Main"
+        "name": "Mijan"
     },
 
 ]

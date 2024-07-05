@@ -809,12 +809,181 @@ print(next(myit))
 
 
 # file write and read
-f = open('y.txt', 'a')
-f.write("jhfdsagnsrduihng")
-f.close()
+# a for create new file and write anything
+import os
 
-f = open("y.txt")
-print(f.read())
+# f = open('y.txt', 'a')
+# f.write("jhfdsagnsrduihng")
+# f.close()
+#
+# f = open("y.txt")
+# print(f.read())
+
+# if os.path.exists('y.txt'):
+#     os.remove("y.txt")
+# else:
+#     print("sorry")
+
+# with open("x.txt") as file1:
+#     read_content = file1.read()
+#     print(read_content)
+with open('x.txt') as file:
+    for line in file:
+        print(line.strip())
+
+################################################
+# import file1
+# print('name is', file1.myDATA[1]["name"])
+
+###############################################
+
+# class PersonData:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def profile(self, gen):
+#         return f"name is {self.name}. age is {self.age}, gender is {gen}"
+#
+#
+# class PersinData2(PersonData):
+#     def __init__(self, name, age, cls, role):
+#         super().__init__(name, age)
+#         self.cls = cls
+#         self.role = role
+#
+#     def profile2nd(self, gen):
+#         return f"name is {self.name} age is {self.age} class is {self.cls} role is {self.role}, gen is {gen}"
+#
+#
+# zamia = PersonData("zamia", 22)
+# print(zamia.profile("F"))
+#
+# zamia = PersinData2("zamia", 22, "Two", 10)
+# print(zamia.profile2nd("f"))
+#
+# import uuid25
+# print("uuid is", uuid25.gen_v4())
 
 
+# class Shop:
+#     cart = []
+#
+#     def __init__(self, buyer):
+#         self.buyer = buyer
+#
+#     def add_cart(self, item):
+#         self.cart.append(item)
+#
+#
+# p1 = Shop('Rohim')
+# p1.add_cart('Phone')
+# p1.add_cart('Watch')
+# print(p1.cart)
+# p2 = Shop('Korim')
+# p2.add_cart('Shoe')
 
+
+########################################################
+
+# def get_even_number(numbers):
+#     evenNumber = [i for i in numbers if i % 2 == 0]
+#     return evenNumber
+#     # for i in numbers:
+#     #     if i % 2 == 0:
+#     #         print(i)
+#
+#
+# list1 = [1, 2, 3, 4, 5, 6, 7, 8]
+# print(get_even_number(list1))
+
+
+# duble number
+
+# x = [1, 2, 3, 4, 5, 6, 7]
+
+# d_number = list(map(lambda num: num * 2, x))
+#
+# print(d_number)
+
+
+# def duble_number(num):
+#     for i in range(len(num)):
+#         print(num[i]*2)
+#
+#
+# duble_number(x)
+
+
+####################################
+
+
+# def contains_vowel(string):
+#     vowels = "aeiouAEIOU"
+#     for char in string:
+#         if char in vowels:
+#             return True
+#     return False
+#
+#
+# # Input from user
+# input_string = input("Enter a String ; ")
+#
+# # Check if string contains a vowel
+# if contains_vowel(input_string):
+#     print("The string contains a vowel.")
+# else:
+#     print("The string does not contain any vowel.")
+
+
+# def contains_vowel(s):
+#     vowels = "AEIOUaeiou"
+#     for char in s:
+#         if char in vowels:
+#             return "The string contains a vowel."
+#     return "The string does not contain any vowel."
+#
+#
+# # Get user input
+# input_string = input("Enter a String : ")
+#
+# # Check for vowels and print the result
+# result = contains_vowel(input_string)
+# print(result)
+
+
+# x = 'main'
+# print('moon' in x)
+
+
+# def vowelChecker(char):
+#     vowel = 'aeiouAEIOU'
+#     n = 0
+#     for i in char:
+#         if i in vowel:
+#             n += 1
+#     if n > 0:
+#         print("The string contains a vowel.")
+#     else:
+#         print("The string does not contain any vowel.")
+#
+#
+# inp = input()
+#
+# vowelChecker(inp)
+
+
+##################################################
+
+
+# text = input()
+# vowel = ['a', 'e', 'i', 'o', 'u']
+# flag = 0
+# for i in text.lower():
+#     if i in vowel:
+#         flag += 1
+#         break
+# if flag > 0:
+#     print('The string contains a vowel.')
+# else:
+#     print('The string does not contain any vowel.')
