@@ -287,6 +287,7 @@
 
 # function
 
+
 def myFun():
     print("hi")
 
@@ -301,8 +302,8 @@ myFun()
 
 # def myfun(*x):
 #     print(x[0])
-# 
-# 
+#
+#
 # myfun("a", "b", "c")
 
 
@@ -717,7 +718,7 @@ print(next(myit))
 
 # li = [1, 2, 3, 4]
 # # li[1: 2] = 5, 6, 7
-# li[1:2] = [5, 6, 7] 
+# li[1:2] = [5, 6, 7]
 # print(li)
 
 
@@ -757,7 +758,7 @@ print(next(myit))
 #     s = input("enter value: ")
 #     myList.append(s)
 #     if s == "q":
-#         break 
+#         break
 # print(myList)
 
 
@@ -827,7 +828,7 @@ import os
 # with open("x.txt") as file1:
 #     read_content = file1.read()
 #     print(read_content)
-with open('x.txt') as file:
+with open("x.txt") as file:
     for line in file:
         print(line.strip())
 
@@ -987,3 +988,594 @@ with open('x.txt') as file:
 #     print('The string contains a vowel.')
 # else:
 #     print('The string does not contain any vowel.')
+
+
+# maping #################################################
+
+# a,b,c = map(int,input().split())
+# print(a)
+# print(b)
+# print(c)
+
+# def mapfun(a, b):
+#     return a + b
+#
+#
+# x = map(mapfun, (9, 4), (3, 4))
+# print(list(x))
+
+
+# bmi CALCULATOR
+# def splitingFun(a):
+#     return a
+#
+#
+# x = map(splitingFun, input().split())
+# y = list(x)
+#
+# h = float(y[0])
+# w = float(y[1])
+#
+#
+# def bmiCalculator(height, wight):
+#     bmi = wight / (height ** 2)
+#     print(f"BMI {bmi:.2f}")
+#     if bmi < 18.5:
+#         print("Underweight")
+#     elif bmi >= 18.5 and bmi < 25.0:
+#         print("Normal weight")
+#     elif bmi >= 25.0 and bmi < 30.0:
+#         print("Overweight")
+#     else:
+#         print("Obese")
+#
+#
+# bmiCalculator(h, w)
+
+
+# find nest number
+
+# def splitingFun(a):
+#     return a
+#
+#
+# inp = map(splitingFun, input().split())
+# toList = list(inp)
+#
+# inpNum1 = int(toList[0])
+# inpNum2 = int(toList[1])
+# inpNum3 = int(toList[2])
+#
+#
+# def nextNumberFinder(n1, n2, n3):
+#     differance = n2 - n1
+#     n4 = n3 + differance
+#     print(n4)
+#
+#
+# nextNumberFinder(inpNum1, inpNum2, inpNum3)
+
+#
+# diff = b-a
+# next_number = c+diff
+# print(next_number)
+
+
+# name = "main zamia"
+# sploting = name.split()
+# #
+# print(sploting)
+#
+# w, h = input("write :")
+#
+# print(w)
+# print(h)
+
+
+# def get_odd_number(numbers):
+#  odd_number = [num for num in numbers if num % 2 == 1]
+#  return odd_number
+#
+#
+# l1 = [0, 1, 2, 3, 4, 5]
+# print(l1[::-1])
+# print(get_odd_number(l1))
+
+
+# def reverse_string(strings):
+#  reversed_strings = [s[::1] for s in strings]
+#  return reversed_strings
+#
+#
+# str_list_1 = ["Hello", "Python", "Django"]
+# print(reverse_string(str_list_1))
+
+
+# def merge_dicts(dict1, dict2):
+#  merged = dict2.copy()
+#  merged.update(dict1)
+#  return merged
+#
+#
+# dict1 = {'a':1, 'b':2}
+# dict2 = {'b':3, 'c': 4}
+# print(merge_dicts(dict1, dict2))
+
+
+# num = lambda l:l*l
+#
+# print(num(4**2))
+
+contact_book = [
+    {"name": "main", "phone": 23, "email": "Dhaka"},
+    {"name": "zamia", "phone": 22, "email": "Dhaka"},
+    {"name": "amana", "phone": 22, "email": "Dhaka"},
+    {"name": "fatema", "phone": 22, "email": "Dhaka"},
+    {"name": "kamal", "phone": 25, "email": "Chittagong"},
+]
+
+
+# print(contact_book[0]["name"])
+
+
+# create contact
+# contact_book = []
+
+
+def contact_book_gen():
+    name = input("name : ")
+    phone = input("phone : ")
+    email = input("email : ")
+
+    contact_book.append(
+        {
+            "name": name,
+            "phone": phone,
+            "email": email,
+        }
+    )
+
+
+# for contact in range(len(contact_book)):
+#     print(
+#         f"name {contact_book[contact]["name"]} phone {contact_book[contact]["phone"]} email {contact_book[contact]["email"]}",
+#         sep=" | ",
+#     )
+
+
+# view contact
+def view_contact():
+    for contact in range(len(contact_book)):
+        print(
+            f"name {contact_book[contact]['name']} phone {contact_book[contact]['phone']} email {contact_book[contact]['email']}"
+        )
+
+
+# search contact
+def search_contact():
+    scherchInp = input("what do you want to scherch : ")
+
+    for contact in range(len(contact_book)):
+        if scherchInp in contact_book[contact]["name"]:
+            print(
+                f"name {contact_book[contact]['name']} phone {contact_book[contact]['phone']} email {contact_book[contact]['email']}",
+                sep=" | ",
+            )
+
+
+# remove contact
+def remove_contact():
+
+    for contact in range(len(contact_book)):
+        print(
+            f"{contact + 1}. {contact_book[contact]["name"]}, {contact_book[contact]["phone"]}, {contact_book[contact]["email"]}"
+        )
+
+    removeInp = int(input("what do you want to remove : "))
+    contact_book.pop(removeInp - 1)
+    print(contact_book)
+
+
+# remove_contact()
+
+
+# update contact
+
+
+def update_contact():
+    # i have to see index number
+    for contact in range(len(contact_book)):
+        print(
+            f"{contact + 1}. {contact_book[contact]['name']}, {contact_book[contact]['phone']}, {contact_book[contact]['email']}"
+        )
+
+    updateInp = int(input("what do you want to update : "))
+    print(contact_book[updateInp - 1])
+
+    newName = input("new name : ")
+    newPhone = input("new phone : ")
+    newEmail = input("new email : ")
+
+    contact_book[updateInp - 1] = {
+        "name": newName,
+        "phone": newPhone,
+        "email": newEmail,
+    }
+
+    print(contact_book)
+
+
+# update_contact()
+
+
+# backup contact
+
+
+def backup_contact():
+    # fp = open("contact.csv", "wt")
+    with open("contact.csv", "wt") as fp:
+        for contact in contact_book:
+            line = f"{contact["name"]},{contact["phone"]},{contact["email"]}\n"
+            fp.write(line)
+            # fp.close()
+
+    print("backup done !")
+
+
+def restore():
+    with open("contact.csv", "rt") as fp:
+        for line in fp.readlines():
+            spliteLines = line.strip().split(",")
+            contact = {
+                "name": spliteLines[0],
+                "phone": spliteLines[1],
+                "email": spliteLines[2],
+            }
+            contact_book.append(contact)
+
+
+# manu_option = """
+# 1. View Contact
+# 2. Create contact
+# 3. Search contact
+# 4. Remove contact
+# 5. Update contact
+# 6. Backup contact
+# 7. Restore contact
+# 0. Exit
+# """
+
+# while True:
+#     print(manu_option)
+#     choice = int(input("Choose an option : "))
+#     if choice == 1:
+#         view_contact()
+#     elif choice == 2:
+#         contact_book_gen()
+#     elif choice == 3:
+#         search_contact()
+#     elif choice == 4:
+#         remove_contact()
+#     elif choice == 5:
+#         update_contact()
+#     elif choice == 6:
+#         backup_contact()
+#     elif choice == 7:
+#         restore()
+#     elif choice == 0:
+#         break
+
+
+# def temCalculator():
+#     cel = float(input())
+#     print(cel)
+
+#     fah = ((9/5 * cel) + 32)
+#     print(f"The temperature in Fahrenheit is: {fah:.2f}")
+
+# temCalculator()
+
+
+# find minimum number
+
+
+# numInp = input()
+# splitingNumInp = numInp.split()
+
+# num1 = int(splitingNumInp[0])
+
+# num2 = int(splitingNumInp[1])
+
+# num3 = int(splitingNumInp[2])
+
+# minNun = min(num1, num2, num3)
+# print(minNun)
+
+
+# calculate the area of a Triangle
+
+# def calculateTriangleArea(h, b):
+#     area = (h * b) / 2
+#     return area
+
+
+# inp = input()
+
+# splitingInp = inp.split()
+
+# height = float(splitingInp[0])
+
+# base = float(splitingInp[1])
+
+# area = calculateTriangleArea(height, base)
+# print(f"{int(area)}")
+
+
+# find the difference between two numbers
+
+# def finderBetweenTwoNumber(n1, n2):
+#     diff = n1 - n2
+#     return diff
+
+
+# inp = input()
+
+# splitingInp = inp.split()
+
+# n1 = int(splitingInp[0])
+# n2 = int(splitingInp[1])
+
+# diff = finderBetweenTwoNumber(n1, n2)
+# print(diff)
+
+
+# calculate the area of a rectangle
+
+
+# def calculateAreaRectangle(l, w):
+#     area = l * w
+#     return area
+
+
+# inp = input()
+
+# splitingInp = inp.split()
+
+# l = int(splitingInp[0])
+# w = int(splitingInp[1])
+
+# area = calculateAreaRectangle(l, w)
+# print(area)
+
+
+# Write a program to find the quotient of two numbers (integer division).
+
+# inp = input()
+
+# splitingInp = inp.split()
+
+# num1 = int(splitingInp[0])
+# num2 = int(splitingInp[1])
+# diviton = num1 / num2
+# print(int(diviton))
+
+
+# calculate the distance between two points
+# math.dist()
+# import math
+
+# inp1 = input()
+# inp2 = input()
+# splitingInp1 = inp1.split()
+# splitingInp2 = inp2.split()
+# x1 = float(splitingInp1[0])
+# y1 = float(splitingInp1[1])
+# listing1 = [x1, y1]
+
+# x2 = float(splitingInp2[0])
+# y2 = float(splitingInp2[1])
+# listing2 = [x2, y2]
+
+# distance = math.dist(listing1, listing2)
+# print(f"Distance: {distance:.2f}")
+
+
+# num1 = [0, 0]
+# num2 = [1, 2]
+# print(math.dist(num1, num2))
+
+
+# inp1 = input()
+# # inp2 = input()
+# splitingInp1 = inp1.split()
+# print(splitingInp1)
+
+
+library = [
+    {
+        "title": "To Kill a Mockingbird",
+        "authors": ["Harper Lee"],
+        "ISBN": "978-0-06-112008-4",
+        "publishing_year": 1960,
+        "publisher": "J.B. Lippincott & Co.",
+        "genre": "Fiction",
+    },
+    {
+        "title": "To Kill a Mockingbird",
+        "authors": ["Harper Lee"],
+        "ISBN": "978-0-06-112008-4",
+        "publishing_year": 1960,
+        "publisher": "J.B. Lippincott & Co.",
+        "genre": "Fiction",
+    },
+    {
+        "title": "1984",
+        "authors": ["George Orwell"],
+        "ISBN": "978-0-452-28423-4",
+        "publishing_year": 1949,
+        "publisher": "Secker & Warburg",
+        "genre": "Dystopian",
+    },
+    {
+        "title": "The Great Gatsby",
+        "authors": ["F. Scott Fitzgerald"],
+        "ISBN": "978-0-7432-7356-5",
+        "publishing_year": 1925,
+        "publisher": "Charles Scribner's Sons",
+        "genre": "Tragedy",
+    },
+]
+
+
+# view book
+
+
+def view_books():
+    for book in library:
+        print(
+            f"Title: {book['title']} | Authors: {book["authors"]} | ISBN: {book["ISBN"]} | Publishing Year: {book["publishing_year"]} | Publisher: {book['publisher']} | Genre: {book['genre']}"
+        )
+
+
+# view_books()
+
+
+# create book
+
+
+def create_book():
+    # new book inp
+    title = input("Enter the title of the book: ")
+    authors = input(
+        "Enter the authors of the book (please use comma to add multiple authors): "
+    )
+    authors = authors.split(",")
+    ISBN = input("Enter the ISBN of the book: ")
+    publishing_year = input("Enter the publishing year of the book: ")
+    publisher = input("Enter the publisher of the book: ")
+    genre = input("Enter the genre of the book: ")
+
+    # now i will connet into dicnatory
+    newBook = {
+        "title": title,
+        "authors": authors,
+        "ISBN": ISBN,
+        "publishing_year": publishing_year,
+        "publisher": publisher,
+        "genre": genre,
+    }
+
+    print(newBook)
+
+    library.append(newBook)
+    print("Book added successfully!")
+
+
+# create_book()
+# view_books()
+
+
+# Search books
+
+
+# 4
+def search_books():
+    search__inp = input("Enter the title or ISBN of the book you want to search: ")
+
+    # print(search__inp.lower())
+
+    for book in library:
+        if (
+            search__inp.lower() in book["title"].lower()
+            or search__inp in book["ISBN"].lower()
+        ):
+            print(
+                f"Title: {book['title']} | Authors: {book['authors']} | ISBN: {book['ISBN']} | Publishing Year: {book['publishing_year']} | Publisher: {book['publisher']} | Genre: {book['genre']}"
+            )
+
+
+# search_books()
+
+
+# search book by arother
+
+
+def search_book_by_author():
+    search_inp = input("Enter the author of the book you want to search: ")
+
+    for book in library:
+        for author in book["authors"]:
+            if search_inp.lower() in author.lower():
+                print(
+                    f"Title: {book['title']} | Authors: {book['authors']} | ISBN: {book['ISBN']} | Publishing Year: {book['publishing_year']} | Publisher: {book['publisher']} | Genre: {book['genre']}"
+                )
+
+    # x = [
+    #     "Jhon",
+    #     "David",
+    #     "Harper",
+    #     "George",
+    #     "F.scott",
+    #     "F.scott fitzgerald",
+    #     "Farper lee",
+    # ]
+
+    # print("j" in x[0])
+    # print(x[0].lower())
+
+    # for i in x:
+
+    #     # print(i.lower())
+    #     print("j" in i.lower())
+    #     # if "j" in i.lower():
+    #     #     print(i)
+
+
+# search_book_by_author()
+
+
+# remove book 6
+
+def remove_book():
+    search_inp = input("Enter the title or ISBN of the book you want to remove: ")
+    for index, book in enumerate(library):
+
+        if (
+            search_inp.lower() in book["title"].lower()
+            or search_inp.lower() in book["ISBN"].lower()
+        ):
+            print(
+                f"{index + 1}. Title: {book['title']} | Authors: {book['authors']} | ISBN: {book['ISBN']} | Publishing Year: {book['publishing_year']} | Publisher: {book['publisher']} | Genre: {book['genre']}"
+            )
+
+    removeInp = input("Enter the number of the book you want to remove: ")
+    removeInp = int(removeInp) - 1
+    library.pop(removeInp)
+
+
+# remove_book()
+# view_books()
+
+
+#  lent book 
+
+def lend_book():
+    # search_inp = input("Enter the title or ISBN of the book you want to lend: ")
+    # for index, book in enumerate(library):
+
+    #     if search_inp.lower() in book["title"].lower() or search_inp.lower() in book["ISBN"].lower():
+    #         print(f"{index + 1}. Title: {book['title']} | Authors: {book['authors']} | ISBN: {book['ISBN']} | Publishing Year: {book['publishing_year']} | Publisher: {book['publisher']} | Genre: {book['genre']}")
+
+    # lendInp = input("Enter the number of the book you want to lend: ")
+    # lendInp = int(lendInp) - 1
+
+    inp = input("fileName : ")
+    with open(f"{inp}.csv", "wt") as fp:
+        for book in library:
+            line = f"{book['title']},{book['authors']},{book['ISBN']},{book['publishing_year']},{book['publisher']},{book['genre']}\n"
+            fp.write(line)
+
+
+
+
+lend_book()
