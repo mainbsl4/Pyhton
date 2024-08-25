@@ -180,9 +180,9 @@
 
 # Tuples
 
-# tuples = ("main", "Sazzad", "Mijan", "marjan", "koli")
+# tuples = ("main", "Sazzad", "Mijan", "marjan", "koli", 9)
 # print("tuples 1", tuples)
-# print("tuples 2", tuples[2]);
+# print("tuples 2", tuples[5] + 1);
 
 # for i in range(len(tuples)):
 #   print("tuples 3", i);
@@ -842,24 +842,24 @@ with open("x.txt") as file:
 #     def __init__(self, name, age):
 #         self.name = name
 #         self.age = age
-#
+
 #     def profile(self, gen):
 #         return f"name is {self.name}. age is {self.age}, gender is {gen}"
-#
-#
+
+
 # class PersinData2(PersonData):
 #     def __init__(self, name, age, cls, role):
 #         super().__init__(name, age)
 #         self.cls = cls
 #         self.role = role
-#
+
 #     def profile2nd(self, gen):
 #         return f"name is {self.name} age is {self.age} class is {self.cls} role is {self.role}, gen is {gen}"
-#
-#
+
+
 # zamia = PersonData("zamia", 22)
 # print(zamia.profile("F"))
-#
+
 # zamia = PersinData2("zamia", 22, "Two", 10)
 # print(zamia.profile2nd("f"))
 #
@@ -1391,191 +1391,266 @@ def restore():
 # print(splitingInp1)
 
 
-library = [
-    {
-        "title": "To Kill a Mockingbird",
-        "authors": ["Harper Lee"],
-        "ISBN": "978-0-06-112008-4",
-        "publishing_year": 1960,
-        "publisher": "J.B. Lippincott & Co.",
-        "genre": "Fiction",
-    },
-    {
-        "title": "To Kill a Mockingbird",
-        "authors": ["Harper Lee"],
-        "ISBN": "978-0-06-112008-4",
-        "publishing_year": 1960,
-        "publisher": "J.B. Lippincott & Co.",
-        "genre": "Fiction",
-    },
-    {
-        "title": "1984",
-        "authors": ["George Orwell"],
-        "ISBN": "978-0-452-28423-4",
-        "publishing_year": 1949,
-        "publisher": "Secker & Warburg",
-        "genre": "Dystopian",
-    },
-    {
-        "title": "The Great Gatsby",
-        "authors": ["F. Scott Fitzgerald"],
-        "ISBN": "978-0-7432-7356-5",
-        "publishing_year": 1925,
-        "publisher": "Charles Scribner's Sons",
-        "genre": "Tragedy",
-    },
-]
+# def mainFun(num1):
+#     def inFun(num2):
+#         return num1 + num2
+#     return inFun(9)
 
 
-# view book
+# main = mainFun(6)
+
+# print("zzz",main)
 
 
-def view_books():
-    for book in library:
-        print(
-            f"Title: {book['title']} | Authors: {book["authors"]} | ISBN: {book["ISBN"]} | Publishing Year: {book["publishing_year"]} | Publisher: {book['publisher']} | Genre: {book['genre']}"
-        )
+# inp = input("text here: ")
 
 
-# view_books()
+# print(inp)
 
 
-# create book
+# def SUM(a,b):
+#     return a + b
+# x = [1,2,3,4]
+# y = map(SUM, x, x)
+# print(list(y))
 
 
-def create_book():
-    # new book inp
-    title = input("Enter the title of the book: ")
-    authors = input(
-        "Enter the authors of the book (please use comma to add multiple authors): "
-    )
-    authors = authors.split(",")
-    ISBN = input("Enter the ISBN of the book: ")
-    publishing_year = input("Enter the publishing year of the book: ")
-    publisher = input("Enter the publisher of the book: ")
-    genre = input("Enter the genre of the book: ")
+# namta
+# x = 1
+# y = 51000
 
-    # now i will connet into dicnatory
-    newBook = {
-        "title": title,
-        "authors": authors,
-        "ISBN": ISBN,
-        "publishing_year": publishing_year,
-        "publisher": publisher,
-        "genre": genre,
-    }
-
-    print(newBook)
-
-    library.append(newBook)
-    print("Book added successfully!")
+# for i in range(x,y):
+#     print(f"{i} gorar namta")
+#     for j in range(1, 11):
+#         print(f"{i} * {j} = {i * y}")
 
 
-# create_book()
-# view_books()
+#  reuseable function
+
+# class BBB():
+#     def peofile(self, a , b):
+#         return a + b
+
+# # x = BBB().peofile(1,2)
+# # print(x)
+
+# def MtFun(a,b):
+#     return BBB().peofile(a, b)
+
+# print(MtFun(2,3))
 
 
-# Search books
+# f are man bar korbo ============================================
+# def fArMan(m1,m2,d2):
+#     return (m1*m2)/d2
+
+# m1 = 1
+# m2 = 3
+# d2 = 4
+
+# f = fArMan(m1,m2,d2)
+# print(f"F : {f}")
 
 
-# 4
-def search_books():
-    search__inp = input("Enter the title or ISBN of the book you want to search: ")
+# import math
 
-    # print(search__inp.lower())
-
-    for book in library:
-        if (
-            search__inp.lower() in book["title"].lower()
-            or search__inp in book["ISBN"].lower()
-        ):
-            print(
-                f"Title: {book['title']} | Authors: {book['authors']} | ISBN: {book['ISBN']} | Publishing Year: {book['publishing_year']} | Publisher: {book['publisher']} | Genre: {book['genre']}"
-            )
+# print(math.sin(0))
+# print(math.sin(30))
+# print(math.sin(45))
+# print(math.sin(60))
+# print(math.sin(90))
+# print(abs(-2999))
 
 
-# search_books()
+# import datetime
+
+# print(datetime.MINYEAR)
+# print(datetime.MAXYEAR)
+# print(datetime.timedelta(100, 60))
 
 
-# search book by arother
+# sum number
+# def toInt(n):
+#     return int(n)
+# inp = map(toInt, input().split())
+# listing = list(inp)
+# print(sum(listing))
 
 
-def search_book_by_author():
-    search_inp = input("Enter the author of the book you want to search: ")
+#  bonus of salary where bonus is the 10% of main salary
 
-    for book in library:
-        for author in book["authors"]:
-            if search_inp.lower() in author.lower():
-                print(
-                    f"Title: {book['title']} | Authors: {book['authors']} | ISBN: {book['ISBN']} | Publishing Year: {book['publishing_year']} | Publisher: {book['publisher']} | Genre: {book['genre']}"
-                )
+# salaery = float(input())
+# bonus = 10
 
-    # x = [
-    #     "Jhon",
-    #     "David",
-    #     "Harper",
-    #     "George",
-    #     "F.scott",
-    #     "F.scott fitzgerald",
-    #     "Farper lee",
-    # ]
+# bonus_salary = salaery * (bonus / 100)
 
-    # print("j" in x[0])
-    # print(x[0].lower())
-
-    # for i in x:
-
-    #     # print(i.lower())
-    #     print("j" in i.lower())
-    #     # if "j" in i.lower():
-    #     #     print(i)
+# print(int(bonus_salary))
 
 
-# search_book_by_author()
+# checks if a number entered by the user is even or odd
+
+# inp = int(input())
+
+# if inp % 2 == 0:
+#     print(f"{inp} is an even number.")
+# elif inp % 2 == 1:
+#     print(f"{inp} is an odd number.")
 
 
-# remove book 6
+# calculates the area of a circle with that radius
 
-def remove_book():
-    search_inp = input("Enter the title or ISBN of the book you want to remove: ")
-    for index, book in enumerate(library):
+# import math
+# def area(r):
+#     pi = round(math.pi, 2)
+#     A = pi * (r ** 2)
+#     return A
 
-        if (
-            search_inp.lower() in book["title"].lower()
-            or search_inp.lower() in book["ISBN"].lower()
-        ):
-            print(
-                f"{index + 1}. Title: {book['title']} | Authors: {book['authors']} | ISBN: {book['ISBN']} | Publishing Year: {book['publishing_year']} | Publisher: {book['publisher']} | Genre: {book['genre']}"
-            )
-
-    removeInp = input("Enter the number of the book you want to remove: ")
-    removeInp = int(removeInp) - 1
-    library.pop(removeInp)
+# r = float(input())
+# a = area(r)
+# print(f"The area of the circle is {a:.2f} square units.")
 
 
-# remove_book()
-# view_books()
+# Given an array of integers nums, sort the array in increasing order based on the frequency of the values. If multiple values have the same frequency, sort them in decreasing order.
+# from collections import Counter
+
+# class Solution:
+#     def frequencySort(self, nums):
+#         freq = Counter(nums)
+
+#         nums.sort(key=lambda x: (freq[x], -x))
+
+#         return nums
+
+# s = Solution()
+# print(s.frequencySort([1, 1, 2, 2, 2, 3]))
+# print(s.frequencySort([2, 3, 1, 3, 2]))
+# print(s.frequencySort([-1, 1, -6, 4, 5, -6, 1, 4, 1]))
 
 
-#  lent book 
-
-def lend_book():
-    # search_inp = input("Enter the title or ISBN of the book you want to lend: ")
-    # for index, book in enumerate(library):
-
-    #     if search_inp.lower() in book["title"].lower() or search_inp.lower() in book["ISBN"].lower():
-    #         print(f"{index + 1}. Title: {book['title']} | Authors: {book['authors']} | ISBN: {book['ISBN']} | Publishing Year: {book['publishing_year']} | Publisher: {book['publisher']} | Genre: {book['genre']}")
-
-    # lendInp = input("Enter the number of the book you want to lend: ")
-    # lendInp = int(lendInp) - 1
-
-    inp = input("fileName : ")
-    with open(f"{inp}.csv", "wt") as fp:
-        for book in library:
-            line = f"{book['title']},{book['authors']},{book['ISBN']},{book['publishing_year']},{book['publisher']},{book['genre']}\n"
-            fp.write(line)
+# class Solution:
+#     def frequencySort(self, nums):
+#         x = nums
+#         x.sort(reverse = True)
+#         return x
 
 
+# s = Solution()
+# print(s.frequencySort([1, 1, 2, 2, 2, 3]))
+# print(s.frequencySort([2, 3, 1, 3, 2]))
+# print(s.frequencySort([-1, 1, -6, 4, 5, -6, 1, 4, 1]))
 
 
-lend_book()
+# from collections import Counter
+# x = [1, 1, 2, 2, 2, 3]
+# y = Counter(x)
+# print(y)
+
+
+# def sum_elements_less_than_median(arr):
+#     # arr.sort()
+#     median_index = len(arr) // 2
+
+#     median = arr[median_index]
+
+#     print(median)
+
+#     sum_less_than_median = sum(num for num in arr if num < median)
+
+#     return sum_less_than_median
+
+
+# # Main program
+# if __name__ == "__main__":
+#     n = int(input("Enter size of the array: "))
+#     if n == 0:
+#         print("Input array is empty. Sum is 0.")
+#     else:
+#         print("Enter the elements:")
+#         arr = list(map(int, input().split()))
+
+#         if len(arr) != n:
+#             print(f"Expected {n} elements but got {len(arr)} elements.")
+#         else:
+#             result = sum_elements_less_than_median(arr)
+#             print(f"Output: {result}")
+
+
+####################################################################
+
+# inp = input()
+# if not("0" in inp):
+#     sorter = inp[::-1]
+#     print(sorter)
+# else:
+#     sorter = inp[::-1]
+#     sorter = sorter.lstrip('0')
+#     print(sorter)
+
+
+####################################################################
+
+#  factorial of that number
+# class Factorial_Number_Calculato():
+#     def __init__(self, n):
+#         self.n = n
+    
+#     def factorial(self):
+#         if self.n == 0:
+#             return 1
+#         else:
+
+#             # return self.n * (self.n - 1) * 2
+#             # return self.n * (self.n - 1) * (self.n - 2) * 1
+#             result = 1
+#             for i in range(1, self.n + 1):
+#                 result *= i
+            
+#             return result
+            
+
+
+# n = int(input())
+
+# factorialsCalcucator = Factorial_Number_Calculato(n)
+# factorial = factorialsCalcucator.factorial()
+
+# print(f"{factorial}")
+
+
+
+
+# check whether a number is palindrome or not
+# class PalindromeChecker():
+#     def __init__(self, n):
+#         self.n = n
+    
+#     def is_palindrome(self):
+#         str_n = str(self.n)
+#         return str_n == str_n[::-1]
+
+#     def palindromeValidation(self):
+#         if self.is_palindrome():
+#             return f"{self.n} is a palindrome number"
+#         else:
+#             return f"{self.n} is not a palindrome."
+    
+    
+
+# inp = input()
+# plindrome = PalindromeChecker(inp)
+# print(plindrome.palindromeValidation())
+
+
+
+##############################################################################
+# Write a program where you have to find the GCD(Greatest Common Divisor) of two numbers.
+# import math
+# # inp = input().split()
+# # num1 = int(inp[0])
+# # num2 = int(inp[1])
+
+
+# num1, num2 = map(int, input().split())
+# print(math.gcd(num1, num2))
+
+
