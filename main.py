@@ -1654,3 +1654,176 @@ def restore():
 # print(math.gcd(num1, num2))
 
 
+
+
+
+# Write a program where you will be given a number and it's exponent. You will have to calculate the power of the number.
+# inp = input().split()
+# num1 = int(inp[0])
+# num2 = int(inp[1])
+# print(num1 ** num2)
+
+
+# Write a program where you will be given values of n and r. You will have to print the values of nPr.
+# def factorial(n):
+#     result = 1
+#     for  i in range(1, n + 1):
+#         result *= i
+#     return result
+
+# def calculate(n, r):
+#     calculate = factorial(n) / factorial(n - r)
+#     return int(calculate)
+
+# inp = input().split()
+# n = int(inp[0])
+# r = int(inp[1])
+
+# print(calculate(n, r))
+# ++++++++++++++++++++++++++++++
+# import math
+
+# def calculate_permutation(n, r):
+#     # Calculate nPr using the formula: nPr = n! / (n-r)!
+#     permutation = math.factorial(n) / math.factorial(n - r)
+#     return permutation
+
+# n = int(input("Enter the value of n: "))
+# r = int(input("Enter the value of r: "))
+
+# result = calculate_permutation(n, r)
+# print(f"The value of {n}P{r} is: {result}")
+
+
+
+
+# Write a program that takes three arguments prob, prize, pay and returns true if prob * prize > pay; otherwise return false.
+# def calculate(prob, prize, pay):
+#     if prob * prize > pay:
+#         print("true")
+#     else:
+#         print("false")
+
+# inp = input().split()
+# prob = float(inp[0])
+# prize = float(inp[1])
+# pay = float(inp[2])
+
+# calculate(prob, prize, pay)
+
+
+
+# Write a program that returns the number of frames shown in a given number of minutes for a certain FPS. FPS stands for "frames per second" and it's the number of frames a computer screen shows every second.
+
+# def fpsCalculator(min, fps):
+#     secounds = min * 60
+#     fream = secounds * fps
+#     return fream
+
+# inp = input().split()
+# min = int(inp[0])
+# fps = int(inp[1])
+
+# print(fpsCalculator(min, fps))
+
+
+
+# Write a program that will calculate Kinetic Energy. It can be calculated with the following formula: KE = 0.5mV*V where m is mass in kg, v is velocity in m/s, KE is kinetic energy in J. Return the Kinetic Energy in Joules, given the mass and velocity. For the purposes of this challenge, round answers to the nearest integer.
+
+# def calculate_KE(m, v):
+#     ke = 0.5 * m * (v**2)
+#     return round(ke)
+
+# inp = input().split()
+# m = float(inp[0])
+# v = float(inp[1])
+
+# print(calculate_KE(m, v))
+
+
+
+
+# Write a program that swaps the values of two variables.
+# def swaps_values(v1, v2):
+#     v1, v2 = v1, v2
+#     print(f"Before swapping: num1 = {v1}, num2 = {v2}")
+#     v1, v2 = v2, v1
+#     print(f"After swapping: num1 = {v1}, num2 = {v2}")
+
+# inp = input().split()
+# v1 = int(inp[0])
+# v2 = int(inp[1])
+# swaps_values(v1, v2)
+
+
+# Write a program to create a function that takes three numbers — the width and height of a rectangle, and the radius of a circle — and returns true if the rectangle can fit inside the circle, false if it can't.
+
+import math
+
+def can_rectangle_fit_in_circle(width, height, radius):
+    # Calculate the diagonal of the rectangle
+    diagonal = math.sqrt(width**2 + height**2)
+    
+    # Calculate the diameter of the circle
+    diameter = 2 * radius
+    
+    # Check if the rectangle's diagonal can fit within the circle's diameter
+    if diagonal <= diameter:
+        print("true")
+    else:
+        print("false")
+
+inp = input().split()
+
+width = int(inp[0])
+
+height = int(inp[1])
+
+radius = int(inp[2])
+
+can_rectangle_fit_in_circle(width, height, radius)
+
+
+
+
+# Write a program to create a function that takes two arguments: a father's current age fAge and his son's current age sAge. Сalculate how many years ago the father was twice as old as his son, or in how many years he will be twice as old.
+
+# def years_until_twice_as_old(fAge: int, sAge: int) -> int:
+#     return abs(fAge - 2 * sAge)
+
+# inp = input().split()
+# fAge = int(inp[0])
+# sAge = int(inp[1])
+
+# print(years_until_twice_as_old(fAge, sAge))
+
+
+
+
+
+
+
+
+# Write a program to create a function that takes an array and finds the integer which appears an odd number of times.
+# def find_odd_occurrence(arr):
+#     result = 0
+#     for num in arr:
+#         # XOR each element with result
+#         result ^= num
+#     return result
+
+# inp = input().split()
+
+# arr = list(map(int, inp))
+
+# print(find_odd_occurrence(arr))
+
+
+
+
+
+
+
+
+
+
