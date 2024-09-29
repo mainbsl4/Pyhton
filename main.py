@@ -1827,3 +1827,44 @@ can_rectangle_fit_in_circle(width, height, radius)
 
 
 
+# Write a program to implement a function to generate all possible permutations of characters in a given string. For example, if the input is "abc," the output should include "abc," "acb," "bac," "bca," "cab," and "cba." The output answers will be in sorted order.
+
+# from itertools import permutations
+
+# def generate_permutations(input_str):
+#     perms = permutations(input_str)
+    
+#     sorted_perms = [''.join(p) for p in sorted(perms)]
+    
+#     return sorted_perms
+
+# input_str = input()
+# permutations_list = generate_permutations(input_str)
+
+# print(' '.join(permutations_list))
+
+
+
+
+
+
+# Write a program to find the length of the longest substring in a given string without repeating characters. For example, in the string "abcabcbb," the longest substring without repeating characters is "abc," which has a length of 3.
+
+def longest_substring(s):
+    max_length = 0
+    start = 0
+    used_chars = {}
+    
+    for end in range(len(s)):
+        if s[end] in used_chars and start <= used_chars[s[end]]:
+            start = used_chars[s[end]] + 1
+        else:
+            max_length = max(max_length, end - start + 1)
+        
+        used_chars[s[end]] = end
+
+    return max_length
+
+input_str = input()
+
+print(longest_substring(input_str))
