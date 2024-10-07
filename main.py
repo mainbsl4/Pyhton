@@ -1758,30 +1758,26 @@ def restore():
 
 # Write a program to create a function that takes three numbers — the width and height of a rectangle, and the radius of a circle — and returns true if the rectangle can fit inside the circle, false if it can't.
 
-import math
+# import math
 
-def can_rectangle_fit_in_circle(width, height, radius):
-    # Calculate the diagonal of the rectangle
-    diagonal = math.sqrt(width**2 + height**2)
+# def can_rectangle_fit_in_circle(width, height, radius):
+#     # Calculate the diagonal of the rectangle
+#     diagonal = math.sqrt(width**2 + height**2)
     
-    # Calculate the diameter of the circle
-    diameter = 2 * radius
+#     # Calculate the diameter of the circle
+#     diameter = 2 * radius
     
-    # Check if the rectangle's diagonal can fit within the circle's diameter
-    if diagonal <= diameter:
-        print("true")
-    else:
-        print("false")
+#     # Check if the rectangle's diagonal can fit within the circle's diameter
+#     if diagonal <= diameter:
+#         print("true")
+#     else:
+#         print("false")
 
-inp = input().split()
-
-width = int(inp[0])
-
-height = int(inp[1])
-
-radius = int(inp[2])
-
-can_rectangle_fit_in_circle(width, height, radius)
+# inp = input().split()
+# width = int(inp[0])
+# height = int(inp[1])
+# radius = int(inp[2])
+# can_rectangle_fit_in_circle(width, height, radius)
 
 
 
@@ -1849,22 +1845,110 @@ can_rectangle_fit_in_circle(width, height, radius)
 
 
 # Write a program to find the length of the longest substring in a given string without repeating characters. For example, in the string "abcabcbb," the longest substring without repeating characters is "abc," which has a length of 3.
-
-def longest_substring(s):
-    max_length = 0
-    start = 0
-    used_chars = {}
+# def longest_substring(s):
+#     max_length = 0
+#     start = 0
+#     used_chars = {}
     
-    for end in range(len(s)):
-        if s[end] in used_chars and start <= used_chars[s[end]]:
-            start = used_chars[s[end]] + 1
-        else:
-            max_length = max(max_length, end - start + 1)
+#     for end in range(len(s)):
+#         if s[end] in used_chars and start <= used_chars[s[end]]:
+#             start = used_chars[s[end]] + 1
+#         else:
+#             max_length = max(max_length, end - start + 1)
         
-        used_chars[s[end]] = end
+#         used_chars[s[end]] = end
 
-    return max_length
+#     return max_length
 
-input_str = input()
+# input_str = input()
 
-print(longest_substring(input_str))
+# print(longest_substring(input_str))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Write a program to find the index of a target element from a sorted array in logarithmic time. If the target element is in the array it will print it's index value. Otherwise it will print "Element not found".
+# def binary_search(arr, target):
+#     low = 0
+#     high = len(arr) - 1
+    
+#     while low <= high:
+#         mid = (low + high) // 2
+        
+#         if arr[mid] == target:
+#             return mid
+#         elif arr[mid] < target:
+#             low = mid + 1
+#         else:
+#             high = mid - 1
+        
+    
+#     return "Element not found"
+
+# input_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# target_element = int(input("Enter the target element: "))
+
+# index = binary_search(input_arr, target_element)
+
+# print(index)
+
+
+
+
+
+
+
+
+# Write a program to find the index of a target element from a sorted array in logarithmic time. If the target element is in the array it will print it's index value. Otherwise it will print "Element not found".
+
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    
+    while left <= right:
+        mid = (left + right) // 2
+        
+        if arr[mid] == target:
+            return mid  # Found the target, return its index
+        elif arr[mid] < target:
+            left = mid + 1  # Target is in the right half
+        else:
+            right = mid - 1  # Target is in the left half
+    
+    return -1  # Element not found
+
+# Input reading and processing
+def main():
+    N = int(input().strip())  # Size of array (not really needed for processing)
+    
+    if N == 0:
+        print("Element not found")
+        return
+    
+    arr = list(map(int, input().strip().split()))  # Sorted array
+    P = int(input().strip())  # Target value
+    
+    # Perform binary search
+    result = binary_search(arr, P)
+    
+    # Output results
+    if result == -1:
+        print("Element not found")
+    else:
+        print(result)
+
+if __name__ == "__main__":
+    main()
