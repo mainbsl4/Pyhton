@@ -1894,8 +1894,7 @@ def restore():
 #             low = mid + 1
 #         else:
 #             high = mid - 1
-        
-    
+
 #     return "Element not found"
 
 # input_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -1914,25 +1913,74 @@ def restore():
 
 
 # Write a program to find the index of a target element from a sorted array in logarithmic time. If the target element is in the array it will print it's index value. Otherwise it will print "Element not found".
+# def binary_search(arr, target):
+#     left, right = 0, len(arr) - 1
+    
+#     while left <= right:
+#         mid = (left + right) // 2
+        
+#         if arr[mid] == target:
+#             return mid  # Found the target, return its index
+#         elif arr[mid] < target:
+#             left = mid + 1  # Target is in the right half
+#         else:
+#             right = mid - 1  # Target is in the left half
+    
+#     return -1  # Element not found
 
-def binary_search(arr, target):
+# # Input reading and processing
+# def main():
+#     N = int(input().strip())  # Size of array (not really needed for processing)
+    
+#     if N == 0:
+#         print("Element not found")
+#         return
+    
+#     arr = list(map(int, input().strip().split()))  # Sorted array
+#     P = int(input().strip())  # Target value
+    
+#     # Perform binary search
+#     result = binary_search(arr, P)
+    
+#     # Output results
+#     if result == -1:
+#         print("Element not found")
+#     else:
+#         print(result)
+
+# if __name__ == "__main__":
+#     main()
+
+
+
+
+
+
+
+# First Occurrence Finding
+# Problem Statement
+# Write a program where you will be given a sorted array of integers and a target value.There will be repeated elements. Find the index of the first occurrence of the target in the array using binary search.
+
+def binary_search_first_occurrence(arr, target):
     left, right = 0, len(arr) - 1
+    result = -1  # To store the index of the first occurrence
     
     while left <= right:
         mid = (left + right) // 2
         
         if arr[mid] == target:
-            return mid  # Found the target, return its index
+            result = mid  # Store the index of the target
+            right = mid - 1  # Keep searching on the left side to find the first occurrence
         elif arr[mid] < target:
-            left = mid + 1  # Target is in the right half
+            left = mid + 1  # Search on the right half
         else:
-            right = mid - 1  # Target is in the left half
+            right = mid - 1  # Search on the left half
     
-    return -1  # Element not found
+    return result  # Return the index of the first occurrence or -1 if not found
 
 # Input reading and processing
 def main():
-    N = int(input().strip())  # Size of array (not really needed for processing)
+    N = int(input().strip())  # Size of array
     
     if N == 0:
         print("Element not found")
@@ -1941,8 +1989,8 @@ def main():
     arr = list(map(int, input().strip().split()))  # Sorted array
     P = int(input().strip())  # Target value
     
-    # Perform binary search
-    result = binary_search(arr, P)
+    # Perform binary search for the first occurrence
+    result = binary_search_first_occurrence(arr, P)
     
     # Output results
     if result == -1:
