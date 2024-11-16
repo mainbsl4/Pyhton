@@ -1961,42 +1961,106 @@ def restore():
 # Problem Statement
 # Write a program where you will be given a sorted array of integers and a target value.There will be repeated elements. Find the index of the first occurrence of the target in the array using binary search.
 
-def binary_search_first_occurrence(arr, target):
-    left, right = 0, len(arr) - 1
-    result = -1  # To store the index of the first occurrence
+# def binary_search_first_occurrence(arr, target):
+#     left, right = 0, len(arr) - 1
+#     result = -1  # To store the index of the first occurrence
     
-    while left <= right:
-        mid = (left + right) // 2
+#     while left <= right:
+#         mid = (left + right) // 2
         
-        if arr[mid] == target:
-            result = mid  # Store the index of the target
-            right = mid - 1  # Keep searching on the left side to find the first occurrence
-        elif arr[mid] < target:
-            left = mid + 1  # Search on the right half
-        else:
-            right = mid - 1  # Search on the left half
+#         if arr[mid] == target:
+#             result = mid  # Store the index of the target
+#             right = mid - 1  # Keep searching on the left side to find the first occurrence
+#         elif arr[mid] < target:
+#             left = mid + 1  # Search on the right half
+#         else:
+#             right = mid - 1  # Search on the left half
     
-    return result  # Return the index of the first occurrence or -1 if not found
+#     return result  # Return the index of the first occurrence or -1 if not found
 
-# Input reading and processing
-def main():
-    N = int(input().strip())  # Size of array
+# # Input reading and processing
+# def main():
+#     N = int(input().strip())  # Size of array
     
-    if N == 0:
-        print("Element not found")
-        return
+#     if N == 0:
+#         print("Element not found")
+#         return
     
-    arr = list(map(int, input().strip().split()))  # Sorted array
-    P = int(input().strip())  # Target value
+#     arr = list(map(int, input().strip().split()))  # Sorted array
+#     P = int(input().strip())  # Target value
     
-    # Perform binary search for the first occurrence
-    result = binary_search_first_occurrence(arr, P)
+#     # Perform binary search for the first occurrence
+#     result = binary_search_first_occurrence(arr, P)
     
-    # Output results
-    if result == -1:
-        print("Element not found")
-    else:
-        print(result)
+#     # Output results
+#     if result == -1:
+#         print("Element not found")
+#     else:
+#         print(result)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
+
+
+
+
+
+
+
+
+
+# def is_consecutive(arr):
+#     # Step 1: Check for duplicates
+#     if len(arr) != len(set(arr)):
+#         return False
+    
+#     return max(arr) - min(arr) == len(arr) - 1
+
+# # Input
+# n = int(input())
+# arr = list(map(int, input().split()))
+# print(arr)
+
+# # Output the result
+# if is_consecutive(arr):
+#     print("true")
+# else:
+#     print("false")
+
+
+
+
+
+
+
+# Write a program to create a function that checks if one string is a rotation of another. For example, "waterbottle" is a rotation of "erbottlewat" because you can rotate it to get the original string.
+
+
+# def text_rotation(s1, s2):
+#     # s1 = "waterbottle"
+#     # s2 = "erbottlewat"
+    
+#     # Check if the lengths of the strings are equal
+#     if len(s1) == len(s2) and s1:
+#         return s2 in s1 + s1
+#     return False
+
+
+# inp = input().split(" ")
+
+# s1 = inp[0]
+
+# s2 = inp[1]
+
+# print(text_rotation(s1, s2))
+
+
+
+
+# Write a program to approximate the square root of a non-negative integer using binary search. Your function should return an integer representing the floor of the square root. For example, for 6 it will print 2.
+
+
+import math
+inp = input()
+
+print(int(math.sqrt(inp)))
