@@ -2060,7 +2060,50 @@ def restore():
 # Write a program to approximate the square root of a non-negative integer using binary search. Your function should return an integer representing the floor of the square root. For example, for 6 it will print 2.
 
 
-import math
-inp = input()
+# import math
+# inp = input()
 
-print(int(math.sqrt(inp)))
+# print(int(math.sqrt(inp)))
+
+
+
+
+# Write a program where you will be given an array arr[] of size N and an integer P. Find the triplet in the array which sums up to the given integer P.
+
+# def find_triplet_sum(arr, N, P):
+#     arr.sort()  # Sort the array to use two-pointer technique
+
+#     for i in range(N - 2):
+#         # Use two pointers to find the other two numbers
+#         left = i + 1
+#         right = N - 1
+
+#         while left < right:
+#             current_sum = arr[i] + arr[left] + arr[right]
+
+#             if current_sum == P:
+#                 return arr[i], arr[left], arr[right]
+#             elif current_sum < P:
+#                 left += 1  # Move the left pointer to the right
+#             else:
+#                 right -= 1  # Move the right pointer to the left
+
+#     return None  # Return None if no triplet is found
+
+# # Input handling
+# if __name__ == "__main__":
+#     N = int(input())  # Read the size of the array
+#     arr = list(map(int, input().split()))  # Read the array elements
+#     P = int(input())  # Read the target sum
+
+#     result = find_triplet_sum(arr, N, P)
+#     if result:
+#         print(*result)  # Print the triplet as space-separated values
+#     else:
+#         print("No triplet found")
+
+
+
+
+
+
