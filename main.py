@@ -2107,3 +2107,23 @@ def restore():
 
 
 
+# def engine(x):
+    
+#     return int(x)
+
+# inp = list(map(engine, input().split(" ")))
+
+# print(inp)
+
+
+
+def engine(x):
+    return int(x)
+
+revarse = int(input())
+for i in range(revarse):
+
+    inp = list(map(engine, input().split(" ")))
+
+    inp1, inp2 = inp
+    print(inp1 - inp2)
